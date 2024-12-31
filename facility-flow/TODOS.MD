@@ -1,0 +1,17 @@
+- [ ] Implement Oauth2 for Microsoft 365
+  - [ ] Find good libraries for Oauth2 in react
+  - [ ] Figure out good way to handle and save the Oauth2 token (cookies, local storage, jwt etc.)
+    - Can you use the token to send emails?
+    - Http only cookies?
+- [ ] Send emails from Microsoft 365 using the Oauth2 token
+  - [ ] Look into how to send emails from Microsoft 365 using the Oauth2 token
+- [ ] Allow easy editing of email templates
+  - [ ] Look into good rich text editors for react
+  - [ ] Figure out how to get html content from the editor and save it to the database
+- [ ] Users can upload csv files of contacts/buyers to send emails to
+- [ ] Allow the organizing of contacts into groups
+- [ ] Allow the sending of emails to groups of contacts
+- [ ] Allow the sending of emails to contacts in bulk
+- [ ] Allow the scheduling of emails to be sent at a future date
+- [ ] Allow the scheduling of emails to be sent on a recurring basis
+- [ ] Allow the scheduling of emails to be sent on a specific date and time
