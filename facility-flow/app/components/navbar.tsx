@@ -1,15 +1,19 @@
 import Link from 'next/link';
 import { SignIn } from './auth/signin-button';
 import { SignOut } from './auth/signout-button';
+import { ThemeToggle } from './theme-toggle';
 import { auth } from '@/auth';
 
 export async function Navbar() {
   const session = await auth();
 
   return (
-    <nav className='border-b bg-white dark:bg-transparent shadow-sm'>
+    <nav className='border-b bg-white dark:bg-transparent shadow-md'>
       <div className='flex h-16 items-center px-4 container mx-auto'>
-        <Link href='/' className='font-semibold text-lg flex items-center gap-2'>
+        <Link
+          href='/'
+          className='font-semibold text-lg flex items-center gap-2 text-accent-600 dark:text-accent-400'
+        >
           <svg
             className='w-6 h-6'
             viewBox='0 0 24 24'
@@ -27,6 +31,7 @@ export async function Navbar() {
           Facility Flow
         </Link>
         <div className='ml-auto flex items-center gap-2'>
+          <ThemeToggle />
           {!session && <SignIn />}
           {session && (
             <>

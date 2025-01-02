@@ -30,13 +30,13 @@ export function EmailEditor() {
 
   return (
     <div
-      className='border rounded-lg overflow-hidden bg-gray-50 dark:border-gray-800 dark:bg-gray-800 shadow-sm'
+      className='border rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-800 dark:border-gray-700 shadow-md'
       onClick={focusEditor}
     >
       <FixedMenuBar editor={editor} />
       <EditorContent
         editor={editor}
-        className='p-4 bg-white dark:bg-gray-900 [&_.is-editor-empty]:before:content-[attr(data-placeholder)] [&_.is-editor-empty]:before:text-gray-500 dark:[&_.is-editor-empty]:before:text-gray-400 [&_.is-editor-empty]:before:float-left [&_.is-editor-empty]:before:pointer-events-none [&_.is-editor-empty]:before:h-0'
+        className='p-4 bg-white dark:bg-gray-800 [&_.is-editor-empty]:before:content-[attr(data-placeholder)] [&_.is-editor-empty]:before:text-accent-500 dark:[&_.is-editor-empty]:before:text-accent-300 [&_.is-editor-empty]:before:float-left [&_.is-editor-empty]:before:pointer-events-none [&_.is-editor-empty]:before:h-0'
       />
     </div>
   );

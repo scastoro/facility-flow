@@ -38,7 +38,7 @@ export function FixedMenuBar({ editor }: FixedMenuBarProps) {
       >
         <s>S</s>
       </button>
-      <div className='w-px bg-gray-200' />
+      <div className='w-px bg-gray-300 dark:bg-gray-200' />
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
         className={`p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 ${
@@ -55,7 +55,7 @@ export function FixedMenuBar({ editor }: FixedMenuBarProps) {
       >
         H3
       </button>
-      <div className='w-px bg-gray-200' />
+      <div className='w-px bg-gray-300 dark:bg-gray-200' />
       <button
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         className={`p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 ${
@@ -72,7 +72,7 @@ export function FixedMenuBar({ editor }: FixedMenuBarProps) {
       >
         1.
       </button>
-      <div className='w-px bg-gray-200' />
+      <div className='w-px bg-gray-300 dark:bg-gray-200' />
       <button
         onClick={() => editor.chain().focus().setHorizontalRule().run()}
         className='p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700'
@@ -85,7 +85,7 @@ export function FixedMenuBar({ editor }: FixedMenuBarProps) {
       >
         ↵
       </button>
-      <div className='w-px bg-gray-200' />
+      <div className='w-px bg-gray-300 dark:bg-gray-200' />
       <button
         onClick={() => editor.chain().focus().undo().run()}
         disabled={!editor.can().chain().focus().undo().run()}

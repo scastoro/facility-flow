@@ -15,3 +15,6 @@
 - [ ] Allow the scheduling of emails to be sent at a future date
 - [ ] Allow the scheduling of emails to be sent on a recurring basis
 - [ ] Allow the scheduling of emails to be sent on a specific date and time
+- [ ] Implement an AI assistant to help with the writing of emails
+  - [ ] Figure out which AI service to use
+  - [ ] Implement the AI service in the application
