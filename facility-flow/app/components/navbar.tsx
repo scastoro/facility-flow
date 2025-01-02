@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import { SignIn } from './auth/signin-button';
 import { SignOut } from './auth/signout-button';
+import { auth } from '@/auth';
 
-export function Navbar() {
+export async function Navbar() {
+  const session = await auth();
+
   return (
-    <nav className='border-b'>
+    <nav className='border-b bg-white dark:bg-transparent shadow-sm'>
       <div className='flex h-16 items-center px-4 container mx-auto'>
         <Link href='/' className='font-semibold text-lg flex items-center gap-2'>
           <svg
@@ -24,8 +27,12 @@ export function Navbar() {
           Facility Flow
         </Link>
         <div className='ml-auto flex items-center gap-2'>
-          <SignIn />
-          <SignOut />
+          {!session && <SignIn />}
+          {session && (
+            <>
+              <SignOut />
+            </>
+          )}
         </div>
       </div>
     </nav>
