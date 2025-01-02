@@ -2,21 +2,29 @@
 
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
+import Placeholder from '@tiptap/extension-placeholder';
+import { FixedMenuBar } from './fixed-menu-bar';
 
 export function EmailEditor() {
   const editor = useEditor({
-    extensions: [StarterKit],
+    extensions: [
+      StarterKit,
+      Placeholder.configure({
+        placeholder: 'Start typing your email...',
+      }),
+    ],
     editorProps: {
       attributes: {
-        class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none',
+        class: 'prose prose-sm dark:prose-invert focus:outline-none max-w-none',
       },
     },
-    content: '<p>Start writing your email...</p>',
+    content: '',
+    immediatelyRender: false,
   });
-
   return (
-    <div className='border rounded-lg p-4 bg-white dark:bg-gray-800'>
-      <EditorContent editor={editor} />
+    <div className='border rounded-lg overflow-hidden dark:border-gray-800'>
+      <FixedMenuBar editor={editor} />
+      <EditorContent editor={editor} className='min-h-[200px] p-4' />
     </div>
   );
 }
