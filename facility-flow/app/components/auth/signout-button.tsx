@@ -1,4 +1,5 @@
 import { signOut } from '@/auth';
+import { Button } from '../ui/button';
 
 export function SignOut() {
   return (
@@ -10,9 +11,9 @@ export function SignOut() {
         });
       }}
     >
-      <button className='button' type='submit' formAction={undefined}>
+      <Button variant='secondary' type='submit'>
         Sign Out
-      </button>
+      </Button>
     </form>
   );
 }
